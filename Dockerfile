@@ -12,7 +12,7 @@ VOLUME ["/data/db"]
 
 EXPOSE 27017
 
-RUN --smallfiles --rest
+#RUN --smallfiles --rest
 
 CMD mongod --port 27017 --dbpath /data/db
 
