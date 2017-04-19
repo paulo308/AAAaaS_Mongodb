@@ -16,7 +16,6 @@ EXPOSE 27017
 
 #RUN --smallfiles --rest
 
-RUN python3 db_scripts/create_mongo_user.py
 
-ENTRYPOINT mongod --port 27017 --dbpath /data/db
+ENTRYPOINT mongod --rest --port 27017 --dbpath /data/db
 
