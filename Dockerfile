@@ -8,11 +8,15 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 #ADD ./data /data/db
 #ADD ./certs /certs
 
+COPY ./db_scripts /db_scripts
+
 VOLUME ["/data/db"]
 
 EXPOSE 27017
 
 #RUN --smallfiles --rest
+
+RUN python3 db_scripts/create_mongo_user.py
 
 ENTRYPOINT mongod --port 27017 --dbpath /data/db
 
