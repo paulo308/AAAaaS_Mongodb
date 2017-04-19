@@ -9,9 +9,10 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 #ADD ./certs /certs
 
 VOLUME ["/data/db"]
-WORKDIR /data
 
 EXPOSE 27017
 
-ENTRYPOINT mongod --port 27017 --dbpath /data/db
+RUN --smallfiles --rest
+
+CMD mongod --port 27017 --dbpath /data/db
 
