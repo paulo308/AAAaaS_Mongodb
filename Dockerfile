@@ -17,5 +17,5 @@ EXPOSE 27017
 #RUN --smallfiles --rest
 
 
-ENTRYPOINT mongod --rest --port 27017 --dbpath /data/db
+ENTRYPOINT mongod --smallfiles --rest --port 27017 --dbpath /data/db
 
