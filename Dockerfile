@@ -17,8 +17,7 @@ EXPOSE 27017
 
 #RUN --smallfiles --rest
 
-RUN chmod +x db_scripts/create_aaadb.sh && ./db_scripts/create_aaadb.sh
-RUN chmod +x db_scripts/update_dump.sh && ./db_scripts/update_dump.sh
+#RUN chmod +x db_scripts/create_aaadb.sh && ./db_scripts/create_aaadb.sh
+#RUN chmod +x db_scripts/update_dump.sh && ./db_scripts/update_dump.sh
 
 ENTRYPOINT mongod --smallfiles --rest --port 27017 --dbpath /data/db
-
