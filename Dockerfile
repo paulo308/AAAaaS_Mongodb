@@ -10,6 +10,7 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 
 COPY ./db_scripts /db_scripts
 COPY ./dump /dump
+COPY ./certs /certs
 
 VOLUME ["/data/db"]
 
