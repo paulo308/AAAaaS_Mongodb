@@ -15,12 +15,12 @@ db.getSiblingDB('$external').runCommand(
 
 
 PWD="H1DiZeMWdU4UmA=="
-_DEFAULT_DB_HOST = 'mongo'
+_DEFAULT_DB_HOST = 'bsserver'
 _DEFAULT_DB_PORT = 27017
 _DEFAULT_DB_NAME = 'AAADB'
 _DEFAULT_CLIENT_CERT = 'certs/mongo_client_crt.pem'
 _DEFAULT_CA_CERT = 'certs/root_ca.pem'
-_DEFAULT_USER = 'OU=mongo_client,O=Bigsea,L=Campinas,ST=SP,C=BR'
+_DEFAULT_USER = 'OU=mongo_client,O=BIGSEA,L=Coimbra,ST=CB,C=PT'
 _DEFAULT_MECHANISM = 'MONGODB-X509'
 
 if __name__ == '__main__':
