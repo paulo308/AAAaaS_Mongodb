@@ -11,7 +11,10 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 COPY ./db_scripts /db_scripts
 COPY ./dump /dump
 
-#VOLUME ["/data/db"]
+RUN chown -R mongodb:mongodb /var/log /data/db 
+USER mongodb
+
+VOLUME ["/data/db"]
 
 EXPOSE 27017
 
