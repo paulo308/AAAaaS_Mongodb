@@ -11,8 +11,8 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 COPY ./db_scripts /db_scripts
 COPY ./dump /dump
 
-RUN chown -R mongodb:mongodb /var/log /data/db 
-USER mongodb
+RUN chown -R marathon:root /var/log /data/db 
+USER marathon
 
 VOLUME ["/data/db"]
 
