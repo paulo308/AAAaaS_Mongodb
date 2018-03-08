@@ -11,8 +11,8 @@ RUN apt-get update && apt-get -y install nano bash apt-utils sudo lftp python3
 COPY ./db_scripts /db_scripts
 COPY ./dump /dump
 
-RUN chown -R root:root /var/log /data/db 
-USER root
+RUN chown -R 1100:1100 /var/log /data/db 
+
 
 VOLUME ["/data/db"]
 
